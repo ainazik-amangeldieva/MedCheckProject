@@ -1,2 +1,2 @@
-package hospital.service;public interface UserService {
+package hospital.service;public class UserService {
 }
