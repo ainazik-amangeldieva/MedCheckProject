@@ -1,2 +1,7 @@
-package hospital.service;public interface DoctorTypeService {
+package hospital.service;
+
+import hospital.entity.DoctorType;
+
+public interface DoctorTypeService {
+    void createDoctorType(DoctorType doctorType);
 }

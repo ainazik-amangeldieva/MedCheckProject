@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Registration Page</title>
@@ -42,48 +42,32 @@
 
 
 </head>
-<body>
-<form class="form-container" th:action="@{/auth/signUp}" th:object="${user}" method="post"
-      style="border:1px solid #ccc">
+
+<!--<body>-->
+<form class="form-container" th:method="POST" th:action="@{/auth/signUp}" th:object="${user}">
+<!--      style="border:1px solid #ccc">-->
     <div class="container">
         <h1>Sign Up</h1>
         <p>Please fill in this form to create an account.</p>
-        <hr>
-
-        <!--    <div class="form-group">-->
-
-        <!--      <label for="name" class="label-styled">Agency Name</label>-->
-        <!--      <input  type="text" th:field="*{name}" id="name" class="input-styled">-->
-
-        <!--    </div>-->
-
-
-        <!--    <label for="username"><b>Username</b></label>-->
-        <!--    <input id="username" type="text" placeholder="Enter Username" th:field="*{userName}" required>-->
-
 
         <label for="firstName"><b>First name</b></label>
-        <input id="firstName" type="firstName" placeholder="Enter first name" th:field="*{firstName}" required>
+        <input id="firstName" type="firstName" placeholder="Enter first name" th:field="*{firstName}" >
 
         <label for="lastName"><b>Last name</b></label>
-        <input id="lastName" type="lastName" placeholder="Enter last name" th:field="*{lastName}" required>
+        <input id="lastName" type="lastName" placeholder="Enter last name" th:field="*{lastName}" >
 
 
-<!--        <div class="col-3"></div>-->
-<!--        <div class="col-6">-->
             <label for="username"><b> Username</b> </label>
-            <input id="username" type="text" placeholder="Enter username" th:field="*{userName}" required>
-<!--        </div>-->
-<!--        <div class="col-3"></div>-->
+            <input id="username" type="text" placeholder="Enter username" th:field="*{userName}">
 
 
             <label for="psw"><b>Password</b></label>
-            <input id="psw" type="password" placeholder="Enter password" th:field="*{password}"required>
+            <input id="psw" type="password" placeholder="Enter password" th:field="*{password}">
 
 
 
             <label for="dateOfBirth"><b>Date of birth</b></label>
-            <input id="dateOfBirth" type="dateOfBirth" placeholder="Enter date of birth" th:field="*{dateOfBirth}"
+            <input id="dateOfBirth" type="date" placeholder="Enter date of birth" th:field="*{dateOfBirth}"
                  required>
 
 

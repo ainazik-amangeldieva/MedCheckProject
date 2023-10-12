@@ -1,10 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>DoctorForm</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
 </head>
+<h3>Form for doctor</h3>
 <body>
-$END$
+<form th:method="POST" th:action="@{/doctor/add}" th:object="${doctor}">
+
+    <div class="form-group">
+        <label for="firstName"> FirstName</label>
+        <input id="firstName" type="firstName" placeholder="Enter FirstName" th:field="*{firstName}">
+    </div>
+    <div class="form-group">
+        <label for="lastName"> LastName</label>
+        <input id="lastName" type="lastName" placeholder="Enter LastName" th:field="*{lastName}">
+    </div>
+
+    <div class="form-group">
+        <label for="email"> Email</label>
+        <input id="email" type="email" placeholder="Enter Email" th:field="*{email}">
+    </div>
+
+    <div class="form-group">
+        <label for="phoneNumber"> PhoneNumber</label>
+        <input id="phoneNumber" type="phoneNumber" placeholder="Enter Phone Number" th:field="*{phoneNumber}">
+    </div>
+
+    <div class="form-group">
+        <label for="experience"> Experience</label>
+        <input id="experience" type="experience" placeholder="Enter Experience" th:field="*{experience}">
+    </div>
+
+
+    <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
 </html>

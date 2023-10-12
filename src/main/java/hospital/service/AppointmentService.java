@@ -1,2 +1,4 @@
-package hospital.service;public interface AppointmentService {
+package hospital.service;
+
+public interface AppointmentService {
 }
